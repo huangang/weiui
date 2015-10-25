@@ -1,7 +1,5 @@
 <div class="container js_container">
-    <% page.posts.each(function(item){ %>
-    <%- partial('_partial/article', {item: item, index: true,desc: true}) %>
-    <% }); %>
+    <%- partial('_partial/article') %>
     <% if (page.total > 1){ %>
     <nav id="page-nav" class="weui_cells">
         <%- paginator({
