@@ -257,3 +257,11 @@ text-align: center;
   color: #FFFFFF;
   border: 1px solid #ef4f4f;
 }
+.copyright{
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  right: 0;
+  left: 0;
+  background: ivory;
+}
