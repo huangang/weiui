@@ -1,6 +1,6 @@
 <% if (page.layout=='post'){ %>
 <%- partial('_partial/head') %>
-  <body ontouchstart>
+  <body ontouchstart class="js_container">
     <header>
       <%- partial('_partial/header') %>
     </header>
@@ -15,7 +15,7 @@
 <% } else if(page.layout=='page'){ %>
   <% if(page.source.match(/\.md$/)){ %>
     <%- partial('_partial/head') %>
-      <body ontouchstart>
+      <body ontouchstart class="js_container">
         <header>
           <%- partial('_partial/header') %>
         </header>
@@ -31,7 +31,7 @@
   <% } %>
 <% } else if(page.layout=='search'){ %>
 <%- partial('_partial/head') %>
-    <body ontouchstart>
+    <body ontouchstart class="js_container">
       <header>
         <%- partial('_partial/header') %>
       </header>
@@ -44,7 +44,7 @@
    </html>
 <% } else if(page.layout=='tags'){ %>
  <%- partial('_partial/head') %>
-    <body>
+    <body class="js_container">
       <header>
         <%- partial('_partial/header') %>
       </header>
@@ -57,7 +57,7 @@
    </html>
 <% } else if(page.layout=='categories'){ %>
  <%- partial('_partial/head') %>
-    <body ontouchstart>
+    <body ontouchstart class="js_container">
       <header>
         <%- partial('_partial/header') %>
       </header>
@@ -70,7 +70,7 @@
    </html>
 <% } else if(page.category!=null||page.tag!=null||page.archive!=null) { %>
   <%- partial('_partial/head') %>
-    <body ontouchstart>
+    <body ontouchstart class="js_container">
       <header>
         <%- partial('_partial/header') %>
       </header>
@@ -83,7 +83,7 @@
    </html>
 <% } else { %>
  <%- partial('_partial/head') %>
-  <body ontouchstart>
+  <body ontouchstart class="js_container">
   <header>
       <%- partial('_partial/header') %>
   </header>
