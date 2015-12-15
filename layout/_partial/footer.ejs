@@ -5,11 +5,11 @@
         <div class="weui_actionsheet" id="weui_actionsheet">
             <div class="weui_actionsheet_menu">
                 <% for (var i in theme.menu){ %>
-                <div class="weui_actionsheet_cell"><a href="<%- (theme.menu[i]) %>"><%= i %></a></div>
+                <div class="weui_actionsheet_cell"><a href="<%- theme.menu[i] %>"><%= __(i) %></a></div>
                 <% } %>
             </div>
             <div class="weui_actionsheet_action">
-                <div class="weui_actionsheet_cell" id="actionsheet_cancel">取消</div>
+                <div class="weui_actionsheet_cell" id="actionsheet_cancel"><%= __('cancel')%></div>
             </div>
         </div>
     </div>
