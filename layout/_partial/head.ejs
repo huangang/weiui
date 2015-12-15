@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%
+    var title = page.title;
+    if (is_archive()){
+        title = 'Archives';
+        if (is_month()){
+            title += ': ' + page.year + '/' + page.month;
+        } else if (is_year()){
+            title += ': ' + page.year;
+        }
+    } else if (is_category()){
+        title = 'Category: ' + page.category;
+    } else if (is_tag()){
+        title = 'Tag: ' + page.tag;
+    }
+    %>
+    <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <% if (theme.rss){ %>
+    <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
+    <% } %>
+    <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.favicon %>">
+    <% } %>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta id="stopUsePullRefresh" value="true">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="fullscreen=yes" name="ML-Config">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="Keywords" content="<%=config.subtitle%>" />
+    <meta name="Description" content="<%=config.description%>" />
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="/css/weiui.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <script src="https://res.wx.qq.com/open/libs/zepto/1.1.6/zepto.js"></script>
+    <script src="/js/app.js"></script>
+</head>

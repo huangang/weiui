@@ -1,0 +1,20 @@
+<div class="page">
+    <div class="hd">
+        <h1 class="page_title"><%=config.title%></h1>
+        <p class="page_desc"><%=theme.description%></p>
+    </div>
+    <div class="bd">
+        <div class="weui_cells weui_cells_access global_navs">
+            <% page.posts.each(function(post){ %>
+            <a class="weui_cell js_cell" href="<%=post.path%>" data-id="article">
+                <span class="weui_cell_hd"><img src="/images/icon_nav_article.png" class="icon_nav" alt=""></span>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p><%= post.title%></p>
+                </div>
+                <div class="weui_cell_ft">
+                </div>
+            </a>
+            <% }) %>
+        </div>
+    </div>
+</div>
